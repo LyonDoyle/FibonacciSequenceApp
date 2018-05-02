@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace FibonacciSequenceApp
 {
@@ -28,15 +23,12 @@ namespace FibonacciSequenceApp
                 firstNumber = secondNumber;
                 secondNumber = nextNumber;
                 nextNumber = firstNumber + secondNumber;
-
-                //Thread.Sleep(100);
             }
-
             stopwatch.Stop();
 
-            Console.WriteLine($"elapsed: {stopwatch.ElapsedMilliseconds}ms");
-
-            Console.Read();
+            Console.WriteLine($"elapsed: {stopwatch.ElapsedMilliseconds}ms\n");
+            Console.Write("Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
